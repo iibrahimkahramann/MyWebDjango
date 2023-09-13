@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content%}
+
+
+
+<section id=timeline>
+	<h1>Projelerim</h1>
+	<p class="leader">Sanki zamanın ne kadar hızlı geçtiğini anlıyoruz.</p>
+
+		{% for post in postlar%}
+		<div class="demo-card-wrapper">
+			<div class="demo-card demo-card--step1">
+				<div class="head">
+					<div class="number-box">
+						<span>01</span>
+					</div>
+					<h2><span class="small"></span> {{post.title}}</h2>
+				</div>
+				<div class="body">
+					<a href="">{{post.content}}</a>
+					<img src="http://placehold.it/1000x500" alt="Graphic">
+				</div>
+			</div>
+		</div>
+    {%endfor%}
+</section>
+
+
+
+
+
+{%endblock%}
