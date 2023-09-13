@@ -10,3 +10,12 @@ def project(request,):
     return render(request, 'pages/project.html', {
         'postlar': postlar,
     })
+
+
+
+def post_details(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    return render(request, 'pages/post.html',{
+        'post':post,
+    })
+
