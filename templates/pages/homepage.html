@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content%}
+
+
+
+ <div><div class="container mx-auto">
+    <div class="border-b border-grey-lighter py-16 lg:py-20">
+      <div>
+        <img src="{% static 'img/ibrahim.jpg' %}" class="h-16 w-16" alt="İbrahim" />
+      </div>
+      <h1
+        class="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl"
+      >
+        Merhaba, Ben İbrahim KAHRAMAN
+      </h1>
+      <p class="pt-3 font-body text-xl font-light text-primary dark:text-white">
+          Türkiye'nin İstanbul kentinde güneşli hayatın tadını çıkaran bir junior backend developer.
+
+      </p>
+      <a
+        href="/contact"
+        class="mt-12 block bg-secondary px-10 py-4 text-center font-body text-xl font-semibold text-white transition-colors hover:bg-green sm:inline-block sm:text-left sm:text-2xl"
+      >
+        Merhaba!
+      </a>
+    </div>
+
+    <div class="border-b border-grey-lighter py-16 lg:py-20">
+      <div class="flex items-center pb-6">
+        <img src="{% static 'img/icon-story.png' %}" alt="icon story" />
+        <h3
+          class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
+        >
+          Hikayem
+        </h3>
+      </div>
+      <div>
+        <p class="font-body font-light text-primary dark:text-white">
+          Ben İbrahim Kahraman, Bursa'nın İnegöl ilçesinde doğup Giresun'un Şebinkarahisar ilçesinde büyüdüm.
+          Mütevazi bir ailenin ikinci çocuğuyum.
+          Annem ve babam bir fabrikada sorumlular ve ben bunları hak edebilmek için elimden gelenin en iyisini yapmaya çalışıyorum.
+          <br />
+          <br />
+          Lisede Bursa'nın inegöl ilçesinde başlayan hikayem,
+          yazılımla olan bağlantım kendimi geliştirme isteğim ve abimin mobil uygulama yapmasını izlememle oluştu.
+          Python'a özel bir udemy kursuyla başlayan ve Acun Medya Akademi'ye uzanan bir yolculuk.
+          Şu anda kendimi olabildiğince geliştiriyor ve üretiyorum.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}
