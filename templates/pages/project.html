@@ -8,10 +8,10 @@
   {% for post in postlar%}
     <div class="card">
       <div class="card__header">
-        <img src="{{ post.image.url }}" alt="card__image" class="card__image" width="600">
+        <img src="{{ post.image.url }}" alt="" class="card__image" width="600">
       </div>
       <div class="card__body">
-        <h4><a href="{% url 'project' slug=post.slug%}">{{post.title}}</a></h4>
+        <h4><a href="{% url 'post_details' slug=post.slug%}">{{post.title}}</a></h4>
         <p>{{post.summary}}</p>
       </div>
     </div>
