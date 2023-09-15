@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post, Contact
 from .forms import ContactForms
+from django.contrib import messages
+
 def homepage(request):
     return render(request, 'pages/homepage.html')
 
