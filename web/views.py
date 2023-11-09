@@ -4,21 +4,21 @@ from .forms import ContactForms
 from django.contrib import messages
 
 def homepage(request):
-    postlar = Post.objects.all()
+    posts = Post.objects.all()
     return render(request, 'pages/homepage.html',{
-        'postlar': postlar,
+        'posts': posts,
     })
 
 
 
 
 
-def post_details(request, slug):
+def projects_details(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    postlar = Post.objects.all()
-    return render(request, 'pages/post.html',{
+    posts = Post.objects.all()
+    return render(request, 'pages/project.html',{
         'post': post,
-        'postlar': postlar
+        'posts': posts
     })
 
 

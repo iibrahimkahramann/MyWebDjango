@@ -6,9 +6,17 @@ from autoslug import AutoSlugField
 class Post(models.Model):
     title = models.CharField(max_length=120)
     summary = models.CharField(max_length=155)
+    desing = models.CharField(max_length=120)
+    services = models.CharField(max_length=120)
+    team = models.CharField(max_length=120)
     content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(upload_to='news_images/', default='default_image.jpg')
+    process = models.TextField()
+    result = models.TextField()
+    date = models.DateField(auto_now_add=True)
+    oneimage = models.ImageField(upload_to='news_images/', default='default_image.jpg')
+    twoimage = models.ImageField(upload_to='news_images/', default='default_image.jpg')
+    threeimage = models.ImageField(upload_to='news_images/', default='default_image.jpg')
+    fourimage = models.ImageField(upload_to='news_images/', default='default_image.jpg')
     slug = AutoSlugField(populate_from='title', unique=True, editable=True, blank=True)
 
 
