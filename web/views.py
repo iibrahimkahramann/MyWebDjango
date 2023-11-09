@@ -4,15 +4,12 @@ from .forms import ContactForms
 from django.contrib import messages
 
 def homepage(request):
-    return render(request, 'pages/homepage.html')
-
-
-
-def project(request,):
     postlar = Post.objects.all()
-    return render(request, 'pages/project.html', {
+    return render(request, 'pages/homepage.html',{
         'postlar': postlar,
     })
+
+
 
 
 

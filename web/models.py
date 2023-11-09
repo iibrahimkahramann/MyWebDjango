@@ -9,7 +9,7 @@ class Post(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='news_images/', default='default_image.jpg')
-    slug = AutoSlugField(populate_from='baslik', unique=True, editable=True, blank=True)
+    slug = AutoSlugField(populate_from='title', unique=True, editable=True, blank=True)
 
 
     class Meta:

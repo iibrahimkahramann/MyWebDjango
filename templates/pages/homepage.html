@@ -81,7 +81,7 @@
                             <p class="education-table__txt">2021-2023</p>
                           </div>
                           <div class="education-table__cell col-lg-4">
-                            <p class="education-table__txt">Computer Programming</p>
+                            <p class="education-table__txt">Computer Programming <br> Ataturk Universty</p>
                           </div>
                           <div class="education-table__cell col-lg-4">
                             <p class="education-table__descr">Where I started programming and doing what I love.</p>
@@ -93,7 +93,7 @@
                             <p class="education-table__txt">2023-2023</p>
                           </div>
                           <div class="education-table__cell col-lg-4">
-                            <p class="education-table__txt">Extended Software Expertise</p>
+                            <p class="education-table__txt">Extended Software Expertise <br> Acun Medya Academy</p>
                           </div>
                           <div class="education-table__cell col-lg-4">
                             <p class="education-table__descr">The place where I meet my dreams and work.</p>
@@ -205,6 +205,9 @@
             </div>
           </section>
           <!-- Projects section. Fourth section-->
+
+
+
           <section class="section pp-scrollable" id="projects">
             <div class="projects section-inner">
               <div class="container section-cnt">
@@ -213,47 +216,26 @@
                     <div class="content-marquee__original">
                       <div class="projects-list__item">
                         <!-- Stroke text-->
-                        <div class="stroke-text vlt-stroke-text--lg">
-                          <div class="projects-list__txt">Gaming</div>
-                          <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"><img src="https://via.placeholder.com/575X768" alt=""></a></div>
-                        </div>
-                      </div>
-                      <div class="projects-list__item">
-                        <div class="projects-list__txt">A cup of coffee</div>
-                        <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="https://via.placeholder.com/575X768" alt=""></a></div>
-                      </div>
-                      <div class="projects-list__item">
-                        <div class="projects-list__txt">Balenciaga</div>
-                        <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="https://via.placeholder.com/575X768" alt=""></a></div>
-                      </div>
-                      <div class="projects-list__item">
-                        <div class="projects-list__txt">Exoape</div>
-                        <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="https://via.placeholder.com/575X768" alt=""></a></div>
-                      </div>
-                    </div>
-                    <div class="content-marquee__copy">
-                      <div class="projects-list__item">
-                        <div class="projects-list__txt">Gaming</div>
-                        <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="https://via.placeholder.com/575X768" alt=""></a></div>
-                      </div>
-                      <div class="projects-list__item">
-                        <div class="projects-list__txt">A cup of coffee</div>
-                        <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="https://via.placeholder.com/575X768" alt=""></a></div>
-                      </div>
-                      <div class="projects-list__item">
-                        <div class="projects-list__txt">Balenciaga</div>
-                        <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="https://via.placeholder.com/575X768" alt=""></a></div>
-                      </div>
-                      <div class="projects-list__item">
-                        <div class="projects-list__txt">Exoape</div>
-                        <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="https://via.placeholder.com/575X768" alt=""></a></div>
+                          {% for post in postlar%}
+                              <div class="projects-list__item">
+                                <div class="projects-list__txt">{{post.title}}</div>
+                                <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="{{post.image.url}}" alt=""></a></div>
+                              </div>
+                          {%endfor%}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+</section>
+
+
+
+
+
+
+
           <!-- Services section. Fifth section-->
           <section class="section pp-scrollable" id="skill">
             <div class="services section-inner" style="background-image: url(https://via.placeholder.com/1920X1080)">

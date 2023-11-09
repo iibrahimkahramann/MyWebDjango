@@ -1,23 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
-{%block content%}
+{% block content %}
+
+<section class="section pp-scrollable" id="projects">
+            <div class="projects section-inner">
+              <div class="container section-cnt">
+                <div class="projects-list">
+                  <div class="content-marquee has-stopable">
+                    <div class="content-marquee__original">
+                      <div class="projects-list__item">
+                        <!-- Stroke text-->
+                          {% for post in postlar%}
+                              <div class="projects-list__item">
+                                <div class="projects-list__txt">{{post.title}}</div>
+                                <div class="projects-list__hover js-projects-img"><a class="projects-list__img" href="project.html"> <img src="{{post.image.url}}" alt=""></a></div>
+                              </div>
+                          {%endfor%}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</section>
 
 
-
-<div class="container">
-  {% for post in postlar%}
-    <div class="card">
-      <div class="card__header">
-        <img src="{{ post.image.url }}" alt="" class="card__image" width="600">
-      </div>
-      <div class="card__body">
-        <h4><a href="{% url 'post_details' slug=post.slug%}">{{post.title}}</a></h4>
-        <p>{{post.summary}}</p>
-      </div>
-    </div>
-  {% endfor %}
-
-</div>
 
 
 
