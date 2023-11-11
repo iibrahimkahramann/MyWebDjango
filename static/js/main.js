@@ -30,7 +30,7 @@ function loader() {
 function pagepiling() {
   if ($('.js-sections').length) {
     $('.js-sections').pagepiling({
-      anchors: ['home', 'about', 'education', 'projects', 'skill', 'testimonials', 'news', 'contact'],
+      anchors: ['home', 'about', 'education', 'projects', 'skill','contact'],
       menu: '#navbar',
       navigation: false,
       onLeave: function onLeave(index, nextIndex, direction) {
@@ -176,30 +176,6 @@ function imageMoving() {
 /* Send form */
 
 
-function sendForm() {
-  if ($('.js-form').length) {
-    $('.js-form').each(function () {
-      $(this).validate({
-        errorClass: 'error wobble-error',
-        submitHandler: function submitHandler(form) {
-          $.ajax({
-            type: "POST",
-            url: "mail.php",
-            data: $(form).serialize(),
-            success: function success() {
-              $('#error').modal('hide');
-              $('#success').modal('show');
-            },
-            error: function error() {
-              $('#success').modal('hide');
-              $('#error').modal('show');
-            }
-          });
-        }
-      });
-    });
-  }
-}
 /* Paralax on Project and Blog pages */
 
 

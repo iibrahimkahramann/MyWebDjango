@@ -5,8 +5,18 @@ from django.contrib import messages
 
 def homepage(request):
     posts = Post.objects.all()
+    if request.method == 'POST':
+        form = ContactForms(request.POST)
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.save()
+            messages.success(request, 'Mesajınız Gönderilmiştir')
+            return redirect('homepage',)
+    else:
+        form = ContactForms()
     return render(request, 'pages/homepage.html',{
         'posts': posts,
+        'form': form
     })
 
 
@@ -25,16 +35,6 @@ def projects_details(request, slug):
 
 
 def Contact(request):
-    if request.method == 'POST':
-        form = ContactForms(request.POST)
-        if form.is_valid():
-            contact = form.save(commit=False)
-            contact.save()
-            messages.success(request, 'Mesajınız Gönderilmiştir')
-            return redirect('contact',)
-    else:
-        form = ContactForms()
     return render(request, 'pages/contact.html', {
-        'form': form
     })
 
