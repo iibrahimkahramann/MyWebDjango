@@ -9,7 +9,7 @@
         <h1 class="hero-inner__title">{{post.title}}</h1>
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
-            <p class="hero-inner__txt">Updated portraits of all Instrument employees for the new Instrument site.<br> A unified look and background allows photos to mesh seamlessly online. To see it live check out: </p>
+            <p class="hero-inner__txt">{{post.summary}}</p>
           </div>
         </div>
       </div>
@@ -20,19 +20,19 @@
       <div class="pi-items">
         <div class="pi-item">
           <h3 class="pi-item__title">DESIGN</h3>
-          <p class="pi-item__txt">Jonny Laymore</p>
+          <p class="pi-item__txt">{{post.desing}}</p>
         </div>
         <div class="pi-item">
           <h3 class="pi-item__title">SERVICES</h3>
-          <p class="pi-item__txt">Branding, UI/UX Design, <br>Mobile Design</p>
+          <p class="pi-item__txt">{{post.services}}</p>
         </div>
         <div class="pi-item">
           <h3 class="pi-item__title">DATE</h3>
-          <p class="pi-item__txt">Feburary 25th, 2020</p>
+          <p class="pi-item__txt">{{post.date}}</p>
         </div>
         <div class="pi-item">
           <h3 class="pi-item__title">TEAM</h3>
-          <p class="pi-item__txt">Paul - Designer <br>Vlthemes - Coder</p>
+          <p class="pi-item__txt">{{post.team}}</p>
         </div>
       </div>
     </div>
@@ -42,26 +42,26 @@
       <h2 class="h2 ps-title">Project.</h2>
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
-          <div class="ps-txt">Updated portraits of all Instrument employees for the new Instrument site. <br>A unified look and background allows photos to mesh seamlessly online. To see it live check out: <a href="#">https://example.domain/denima6vsco</a></div>
+          <div class="ps-txt">{{post.content}}</div>
         </div>
       </div>
       <div class="ps-img">
         <div class="ps-img-mask">
           <div class="inside"></div>
-        </div><img src="https://via.placeholder.com/1290X700" alt="">
+        </div><img src="{{post.twoimage.url}}" alt="">
       </div>
     </div>
   </section>
   <section class="project-section">
     <div class="container">
-      <h2 class="h2 ps-title">Solution.</h2>
+      <h2 class="h2 ps-title">Process</h2>
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
-          <div class="ps-txt">Thing form thing fifth. Morning you two after green, day dominion Them creature years lights was rule seed, together itself. Lights creeping second spirit air the. You night and their.</div>
+          <div class="ps-txt">{{post.process}}</div>
         </div>
       </div>
     </div>
-    <div class="ps-video" style="background-image: url(https://via.placeholder.com/1920X760)">
+    <div class="ps-video" style="background-image: url('{{post.threeimage.url}}')">
       <div class="hero-play">
         <!-- Youtube video will open on click--><a class="hero-play-btn js-video-play" href="https://youtube.com/watch?v=l4SwVmkMce8"><i class="svg-image-play"></i></a>
       </div>
@@ -72,13 +72,13 @@
       <h2 class="h2 ps-title">Result</h2>
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
-          <div class="ps-txt">Thing form thing fifth. Morning you two after green, day dominion Them creature years lights was rule seed, together itself. Lights creeping second spirit air the. You night and their.</div>
+          <div class="ps-txt">{{post.result}}</div>
         </div>
       </div>
       <div class="ps-img">
         <div class="ps-img-mask">
           <div class="inside"></div>
-        </div><img src="https://via.placeholder.com/1290X700" alt="">
+        </div><img src="{{post.fourimage.url}}" alt="">
       </div>
       <div class="ps-heart"><a class="ps-heart__link" href="#">
           <svg width="47" height="41" viewbox="0 0 47 41" fill="none" xmlns="http://www.w3.org/2000/svg">
